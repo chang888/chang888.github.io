@@ -79,21 +79,21 @@
 
 
 
-<meta name="description" content="MVC M - Model 数据 V - View 视图 C - Controller 控制器    最上面的一层，是直接面向最终用户的”视图层”（View）。它是提供给用户的操作界面，是程序的外壳。     最底下的一层，是核心的”数据层”（Model），也就是程序需要操作的数据或信息。     中间的一层，就是”控制层”（Controller），它负责根据用户从”视图层”输入的指令，选取”数据">
+<meta name="description" content="概述MVC，MVP和MVVM都是常见的软件架构设计模式（Architectural Pattern），它通过分离关注点来改进代码的组织方式。不同于设计模式（Design Pattern），只是为了解决一类问题而总结出的抽象方法，一种架构模式往往使用了多种设计模式。 要了解MVC、MVP和MVVM，就要知道它们的相同点和不同点。不同部分是C(Controller)、P(Presenter)、VM(V">
 <meta name="keywords" content="MVVM,MVC">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MVVM和MVC">
 <meta property="og:url" content="http://yoursite.com/2019/07/08/MVVM和MVC/index.html">
 <meta property="og:site_name" content="July wind, August rain">
-<meta property="og:description" content="MVC M - Model 数据 V - View 视图 C - Controller 控制器    最上面的一层，是直接面向最终用户的”视图层”（View）。它是提供给用户的操作界面，是程序的外壳。     最底下的一层，是核心的”数据层”（Model），也就是程序需要操作的数据或信息。     中间的一层，就是”控制层”（Controller），它负责根据用户从”视图层”输入的指令，选取”数据">
+<meta property="og:description" content="概述MVC，MVP和MVVM都是常见的软件架构设计模式（Architectural Pattern），它通过分离关注点来改进代码的组织方式。不同于设计模式（Design Pattern），只是为了解决一类问题而总结出的抽象方法，一种架构模式往往使用了多种设计模式。 要了解MVC、MVP和MVVM，就要知道它们的相同点和不同点。不同部分是C(Controller)、P(Presenter)、VM(V">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://user-gold-cdn.xitu.io/2019/2/21/169102cbc41f9719?imageView2/0/w/1280/h/960/format/webp/ignore-error/1">
 <meta property="og:image" content="https://user-gold-cdn.xitu.io/2019/2/21/169102d2c6a8ee5f?imageView2/0/w/1280/h/960/format/webp/ignore-error/1">
 <meta property="og:image" content="https://user-gold-cdn.xitu.io/2019/2/21/169102df8742a9cf?imageView2/0/w/1280/h/960/format/webp/ignore-error/1">
-<meta property="og:updated_time" content="2019-07-08T13:43:09.478Z">
+<meta property="og:updated_time" content="2019-07-08T13:56:39.335Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MVVM和MVC">
-<meta name="twitter:description" content="MVC M - Model 数据 V - View 视图 C - Controller 控制器    最上面的一层，是直接面向最终用户的”视图层”（View）。它是提供给用户的操作界面，是程序的外壳。     最底下的一层，是核心的”数据层”（Model），也就是程序需要操作的数据或信息。     中间的一层，就是”控制层”（Controller），它负责根据用户从”视图层”输入的指令，选取”数据">
+<meta name="twitter:description" content="概述MVC，MVP和MVVM都是常见的软件架构设计模式（Architectural Pattern），它通过分离关注点来改进代码的组织方式。不同于设计模式（Design Pattern），只是为了解决一类问题而总结出的抽象方法，一种架构模式往往使用了多种设计模式。 要了解MVC、MVP和MVVM，就要知道它们的相同点和不同点。不同部分是C(Controller)、P(Presenter)、VM(V">
 <meta name="twitter:image" content="https://user-gold-cdn.xitu.io/2019/2/21/169102cbc41f9719?imageView2/0/w/1280/h/960/format/webp/ignore-error/1">
 
 
@@ -346,57 +346,7 @@
       
 
       
-        <h1 id="MVC"><a href="#MVC" class="headerlink" title="MVC"></a>MVC</h1><ul>
-<li>M - Model 数据</li>
-<li>V - View 视图</li>
-<li>C - Controller 控制器</li>
-</ul>
-<blockquote>
-<ol>
-<li>最上面的一层，是直接面向最终用户的”视图层”（View）。它是提供给用户的操作界面，是程序的外壳。</li>
-</ol>
-</blockquote>
-<blockquote>
-<ol start="2">
-<li>最底下的一层，是核心的”数据层”（Model），也就是程序需要操作的数据或信息。</li>
-</ol>
-</blockquote>
-<blockquote>
-<ol start="3">
-<li>中间的一层，就是”控制层”（Controller），它负责根据用户从”视图层”输入的指令，选取”数据层”中的数据，然后对其进行相应的操作，产生最终结果。</li>
-</ol>
-</blockquote>
-<p>回到Web Development:</p>
-<ol>
-<li>用户发送了一个Request, 比如”/home”</li>
-<li>Controller接到这个Request, 会发出一系列的指令: 比如让Model执行一些操作或者更新某个View</li>
-<li>Model接到Controller的指令, 去数据库里拿出一些数据返回给Controller</li>
-<li>Controller接到数据, 更新了”/home”的页面</li>
-<li>用户看到了这个页面</li>
-</ol>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本系列最开始是为了自己面试准备的.后来发现整理越来越多,差不多有十二万字符,最后决定还是分享出来给大家.</p>
-<p>为了分享整理出来,花费了自己大量的时间,起码是只自己用的三倍时间.如果喜欢的话,欢迎收藏,关注我!谢谢!</p>
-<h3 id="文章链接"><a href="#文章链接" class="headerlink" title="文章链接"></a>文章链接</h3><ul>
-<li><a href="https://juejin.im/post/5c6bab91f265da2dd94c9f9e" target="_blank" rel="noopener">前端面试查漏补缺–(一) 防抖和节流</a></li>
-<li><a href="https://juejin.im/post/5c6bba32f265da2db07382cf" target="_blank" rel="noopener">前端面试查漏补缺–(二) 垃圾回收机制</a></li>
-<li><a href="https://juejin.im/post/5c6bca00f265da2dcf627aaa" target="_blank" rel="noopener">前端面试查漏补缺–(三) 跨域及常见解决办法</a></li>
-<li><a href="https://juejin.im/post/5c6bcdc8e51d45209a1ca3b6" target="_blank" rel="noopener">前端面试查漏补缺–(四) 前端本地存储</a></li>
-<li><a href="https://juejin.im/post/5c6c182ee51d45760b1c8e30" target="_blank" rel="noopener">前端面试查漏补缺–(五) 渲染机制及重绘和回流</a></li>
-<li><a href="https://juejin.im/post/5c6c9c99f265da2d896326ae" target="_blank" rel="noopener">前端面试查漏补缺–(六) 浏览器缓存</a></li>
-<li><a href="https://juejin.im/post/5c6d142151882503b3271f4b" target="_blank" rel="noopener">前端面试查漏补缺–(七) XSS攻击与CSRF攻击</a></li>
-<li><a href="https://juejin.im/post/5c6e4ec1e51d454c6436420f" target="_blank" rel="noopener">前端面试查漏补缺–(八) 前端加密</a></li>
-<li><a href="https://juejin.im/post/5c6e5803f265da2dc0065437" target="_blank" rel="noopener">前端面试查漏补缺–(九) HTTP与HTTPS</a></li>
-<li><a href="https://juejin.im/post/5c6e6063f265da2da53ec8f3" target="_blank" rel="noopener">前端面试查漏补缺–(十) 前端鉴权</a></li>
-<li><a href="https://juejin.im/post/5c6e71216fb9a04a060577da" target="_blank" rel="noopener">前端面试查漏补缺–(十一) 前端软件架构模式MVC/MVP/MVVM</a></li>
-<li><a href="https://juejin.im/post/5c6f9d24e51d4511dd3fd0a2" target="_blank" rel="noopener">前端面试查漏补缺–(十二) 从输入URL到看到页面发生的全过程(含三握手,四挥手详解)</a></li>
-<li><a href="https://juejin.im/post/5c72019551882562811d5cf5" target="_blank" rel="noopener">前端面试查漏补缺–(十三) 内存泄漏</a></li>
-<li><a href="https://juejin.im/post/5c72280351882562914edb61" target="_blank" rel="noopener">前端面试查漏补缺–(十四) 算法及排序</a></li>
-<li><a href="https://juejin.im/post/5c72307551882562e74812dc" target="_blank" rel="noopener">前端面试查漏补缺–(十五) Event Loop</a></li>
-</ul>
-<h3 id="合集篇"><a href="#合集篇" class="headerlink" title="合集篇:"></a><strong>合集篇:</strong></h3><p><a href="https://juejin.im/post/5c73347cf265da2dd773e7dc" target="_blank" rel="noopener">前端面试查漏补缺–Index篇(12万字符合集)</a> 包含目前已写好的系列其他十几篇文章.<strong>后续新增值文章不会再在每篇添加链接,强烈建议议点赞,关注合集篇!!!!,谢谢!~</strong></p>
-<h3 id="后续更新计划"><a href="#后续更新计划" class="headerlink" title="后续更新计划"></a>后续更新计划</h3><p>后续还会继续添加<strong>设计模式</strong>,<strong>前端工程化</strong>,<strong>项目流程,部署,闭环</strong>,<strong>vue常考知识点</strong> 等内容.如果觉得内容不错的话欢迎收藏,关注我!谢谢!</p>
-<h3 id="求一份内推"><a href="#求一份内推" class="headerlink" title="求一份内推"></a><strong>求一份内推</strong></h3><p>目前本人也在准备跳槽,希望各位大佬和HR小姐姐可以内推一份靠谱的<strong>武汉</strong> 前端岗位!邮箱:<a href="mailto:bupabuku@foxmail.com" target="_blank" rel="noopener">bupabuku@foxmail.com</a>.谢谢啦!~</p>
-<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>MVC，MVP和MVVM都是常见的软件架构设计模式（Architectural Pattern），它通过分离关注点来改进代码的组织方式。不同于设计模式（Design Pattern），只是为了解决一类问题而总结出的抽象方法，一种架构模式往往使用了多种设计模式。</p>
+        <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>MVC，MVP和MVVM都是常见的软件架构设计模式（Architectural Pattern），它通过分离关注点来改进代码的组织方式。不同于设计模式（Design Pattern），只是为了解决一类问题而总结出的抽象方法，一种架构模式往往使用了多种设计模式。</p>
 <p>要了解MVC、MVP和MVVM，就要知道它们的相同点和不同点。不同部分是C(Controller)、P(Presenter)、VM(View-Model)，而相同的部分则是MV(Model-View)。</p>
 <h2 id="MVC模式"><a href="#MVC模式" class="headerlink" title="MVC模式"></a>MVC模式</h2><p><strong>MVC模式（Model–view–controller）:</strong></p>
 <p>是软件工程中的一种软件架构模式，把软件系统分为三个基本部分：模型（Model）、视图（View）和控制器（Controller）。</p>
@@ -677,7 +627,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#MVC"><span class="nav-number">1.</span> <span class="nav-text">MVC</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.1.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#文章链接"><span class="nav-number">1.1.1.</span> <span class="nav-text">文章链接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#合集篇"><span class="nav-number">1.1.2.</span> <span class="nav-text">合集篇:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#后续更新计划"><span class="nav-number">1.1.3.</span> <span class="nav-text">后续更新计划</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#求一份内推"><span class="nav-number">1.1.4.</span> <span class="nav-text">求一份内推</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#概述"><span class="nav-number">1.2.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MVC模式"><span class="nav-number">1.3.</span> <span class="nav-text">MVC模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数据关系"><span class="nav-number">1.3.1.</span> <span class="nav-text">数据关系:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#结构实现"><span class="nav-number">1.3.2.</span> <span class="nav-text">结构实现:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#缺点"><span class="nav-number">1.3.3.</span> <span class="nav-text">缺点:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MVP模式"><span class="nav-number">1.4.</span> <span class="nav-text">MVP模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数据关系-1"><span class="nav-number">1.4.1.</span> <span class="nav-text">数据关系:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#结构实现-1"><span class="nav-number">1.4.2.</span> <span class="nav-text">结构实现:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MVC和MVP关系"><span class="nav-number">1.4.3.</span> <span class="nav-text">MVC和MVP关系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MVP的优点"><span class="nav-number">1.4.4.</span> <span class="nav-text">MVP的优点:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MVP的缺点"><span class="nav-number">1.4.5.</span> <span class="nav-text">MVP的缺点:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MVVM模式"><span class="nav-number">1.5.</span> <span class="nav-text">MVVM模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数据关系-2"><span class="nav-number">1.5.1.</span> <span class="nav-text">数据关系:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实现数据绑定的方式："><span class="nav-number">1.5.2.</span> <span class="nav-text">实现数据绑定的方式：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MVVM优点"><span class="nav-number">1.5.3.</span> <span class="nav-text">MVVM优点:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MVVM缺点"><span class="nav-number">1.5.4.</span> <span class="nav-text">MVVM缺点:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#感谢及参考"><span class="nav-number">1.6.</span> <span class="nav-text">感谢及参考</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#概述"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MVC模式"><span class="nav-number">2.</span> <span class="nav-text">MVC模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数据关系"><span class="nav-number">2.1.</span> <span class="nav-text">数据关系:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#结构实现"><span class="nav-number">2.2.</span> <span class="nav-text">结构实现:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#缺点"><span class="nav-number">2.3.</span> <span class="nav-text">缺点:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MVP模式"><span class="nav-number">3.</span> <span class="nav-text">MVP模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数据关系-1"><span class="nav-number">3.1.</span> <span class="nav-text">数据关系:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#结构实现-1"><span class="nav-number">3.2.</span> <span class="nav-text">结构实现:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MVC和MVP关系"><span class="nav-number">3.3.</span> <span class="nav-text">MVC和MVP关系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MVP的优点"><span class="nav-number">3.4.</span> <span class="nav-text">MVP的优点:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MVP的缺点"><span class="nav-number">3.5.</span> <span class="nav-text">MVP的缺点:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MVVM模式"><span class="nav-number">4.</span> <span class="nav-text">MVVM模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数据关系-2"><span class="nav-number">4.1.</span> <span class="nav-text">数据关系:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实现数据绑定的方式："><span class="nav-number">4.2.</span> <span class="nav-text">实现数据绑定的方式：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MVVM优点"><span class="nav-number">4.3.</span> <span class="nav-text">MVVM优点:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MVVM缺点"><span class="nav-number">4.4.</span> <span class="nav-text">MVVM缺点:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#感谢及参考"><span class="nav-number">5.</span> <span class="nav-text">感谢及参考</span></a></li></ol></div>
             
 
           </div>
