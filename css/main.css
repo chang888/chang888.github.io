@@ -1832,7 +1832,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #a2f7ff;
+  background: #709a78;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2931,27 +2931,4 @@ hr {
 ::-moz-selection {
   background: #00c4b6;
   color: #f7f7f7;
-}
-.headband {
-  height: 3px;
-  background-color: transparent;
-}
-.site-meta {
-  padding: 20px 0;
-  color: #fff;
-}
-.site-subtitle {
-  margin-top: 10px;
-  font-size: 13px;
-  color: #fff;
-}
-.btn {
-  color: #49b1f5;
-  background: #fff;
-  border: 2px solid #49b1f5;
-}
-.btn:hover {
-  border-color: #49b1f5;
-  color: #fff;
-  background: #49b1f5;
 }
