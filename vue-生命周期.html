@@ -88,7 +88,7 @@
 <meta property="og:description" content="vue 生命周期深入 单组件的生命周期 父子组件的生命周期 兄弟组件的生命周期 宏mixin的生命周期   生命周期：Vue 实例从开始创建、初始化数据、编译模板、挂载Dom→渲染、更新→渲染、卸载等一系列过程，我们称这是 Vue 的生命周期，各个阶段有相对应的事件钩子  1. 生命周期钩子函数下面这张图是vue生命周期各个阶段的执行情况： | 生命周期钩子        | 组件状态">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/5/6/16333e19beffa0f6?imageView2/0/w/1280/h/960/format/webp/ignore-error/1">
-<meta property="og:updated_time" content="2019-07-30T14:30:45.377Z">
+<meta property="og:updated_time" content="2019-07-31T12:13:28.744Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vue-生命周期">
 <meta name="twitter:description" content="vue 生命周期深入 单组件的生命周期 父子组件的生命周期 兄弟组件的生命周期 宏mixin的生命周期   生命周期：Vue 实例从开始创建、初始化数据、编译模板、挂载Dom→渲染、更新→渲染、卸载等一系列过程，我们称这是 Vue 的生命周期，各个阶段有相对应的事件钩子  1. 生命周期钩子函数下面这张图是vue生命周期各个阶段的执行情况： | 生命周期钩子        | 组件状态">
@@ -364,8 +364,10 @@
 <p><a href="https://link.juejin.im?target=http%3A%2F%2Fjbcdn2.b0.upaiyun.com%2F2018%2F05%2Fb953c074a1d8efe8d75d842807e46252.png" target="_blank" rel="noopener"><img src="https://user-gold-cdn.xitu.io/2018/5/6/16333e19beffa0f6?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt="1343014756-5aea7ac2cec80_articlex"></a><br>| 生命周期钩子        | 组件状态                                                                         | 最佳实践                            |<br>|—————|——————————————————————————|———————————|<br>| beforeCreate  | 实例初始化之后，this指向创建的实例，不能访问到data、computed、watch、methods上的方法和数据                  | 常用于初始化非响应式变量                    |<br>| created       | 实例创建完成，可访问data、computed、watch、methods上的方法和数据，未挂载到DOM，不能访问到$el属性，$ref属性内容为空数组 | 常用于简单的ajax请求，页面的初始化             |<br>| beforeMount   | 在挂载开始之前被调用，beforeMount之前，会找到对应的template，并编译成render函数                         | –                               |<br>| mounted       | 实例挂载到DOM上，此时可以通过DOM API获取到DOM节点，$ref属性可以访问                                   | 常用于获取VNode信息和操作，ajax请求          |<br>| beforeupdate  | 响应式数据更新时调用，发生在虚拟DOM打补丁之前                                                     | 适合在更新之前访问现有的DOM，比如手动移除已添加的事件监听器 |<br>| updated       | 虚拟 DOM 重新渲染和打补丁之后调用，组件DOM已经更新，可执行依赖于DOM的操作                                   | 避免在这个钩子函数中操作数据，可能陷入死循环          |<br>| beforeDestroy | 实例销毁之前调用。这一步，实例仍然完全可用，this仍能获取到实例                                            | 常用于销毁定时器、解绑全局事件、销毁插件对象等操作       |<br>| destroyed     | 实例销毁后调用，调用后，Vue 实例指示的所有东西都会解绑定，所有的事件监听器会被移除，所有的子实例也会被销毁                      | –                               |</p>
 <p>注意：</p>
 <ol>
-<li>created阶段的ajax请求与mounted请求的区别：前者页面视图未出现，如果请求信息过多，页面会长时间处于白屏状态</li>
-<li><code>mounted</code> 不会承诺所有的子组件也都一起被挂载。如果你希望等到整个视图都渲染</li>
+<li><p>created阶段的ajax请求与mounted请求的区别：前者页面视图未出现，如果请求信息过多，页面会长时间处于白屏状态</p>
+</li>
+<li><p><code>mounted</code> 不会承诺所有的子组件也都一起被挂载。如果你希望等到整个视图都渲染</p>
+</li>
 </ol>
 <p>完毕，可以用 <a href="https://link.juejin.im?target=https%3A%2F%2Fcn.vuejs.org%2Fv2%2Fapi%2F%23vm-nextTick" target="_blank" rel="noopener">vm.$nextTick</a></p>
 <ol>
