@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="July wind, August rain">
 <meta property="og:description" content="mac MySQL Server 启动无效从系统偏好设置启动MySQL时，多次点击start无效，发现下面显示了一行警告“Warning the user/local/mysql/data directory is not owned by the mysql user”百度没找到能用的解决方案，后来在stackoverflow上找到了能用的，原文链接如下：http://stackoverflow">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-16T14:52:55.484Z">
+<meta property="og:updated_time" content="2019-08-23T15:39:55.105Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mac MySQL Server 启动无效">
 <meta name="twitter:description" content="mac MySQL Server 启动无效从系统偏好设置启动MySQL时，多次点击start无效，发现下面显示了一行警告“Warning the user/local/mysql/data directory is not owned by the mysql user”百度没找到能用的解决方案，后来在stackoverflow上找到了能用的，原文链接如下：http://stackoverflow">
@@ -331,7 +331,8 @@
 <p>在终端输入以下命令（需密码），再点击start即可</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">sudo chown -RL root:mysql /usr/<span class="built_in">local</span>/mysql</span><br><span class="line"></span><br><span class="line">sudo chown -RL mysql:mysql /usr/<span class="built_in">local</span>/</span><br><span class="line">mysql/data</span><br><span class="line"></span><br><span class="line">sudo /usr/<span class="built_in">local</span>/mysql/support-files/mysql.server start</span><br></pre></td></tr></table></figure>
 
-<p>PS：如果你忘了MySQL的密码，这个文章有修改密码的步骤，比其他罗里吧嗦的好很多。地址在这里—&gt;<br><a href="http://www.cnblogs.com/lihuanqing/p/5623872.html" target="_blank" rel="noopener">http://www.cnblogs.com/lihuanqing/p/5623872.html</a><br>1</p>
+<p>PS：如果你忘了MySQL的密码，这个文章有修改密码的步骤，比其他罗里吧嗦的好很多。地址在这里—&gt;<br><a href="http://www.cnblogs.com/lihuanqing/p/5623872.html" target="_blank" rel="noopener">http://www.cnblogs.com/lihuanqing/p/5623872.html</a></p>
+<p>1222</p>
 <p>MAMP中的mysql密码（默认root - root）和自行安装的mysql密码不同。<br>ceshi</p>
 
       
