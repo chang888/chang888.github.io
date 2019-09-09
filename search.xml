@@ -25,7 +25,7 @@
   <entry>
     <title><![CDATA[mac MySQL Server 启动无效]]></title>
     <url>%2F%E5%90%AF%E5%8A%A8%E6%97%A0%E6%95%88.html</url>
-    <content type="text"><![CDATA[mac MySQL Server 启动无效从系统偏好设置启动MySQL时，多次点击start无效，发现下面显示了一行警告“Warning the user/local/mysql/data directory is not owned by the mysql user”百度没找到能用的解决方案，后来在stackoverflow上找到了能用的，原文链接如下：http://stackoverflow.com/questions/5527676/warning-the-user-local-mysql-data-directory-is-not-owned-by-the-mysql-user/27517150#27517150 在终端输入以下命令（需密码），再点击start即可 12345678sudo chown -RL root:mysql /usr/local/mysqlsudo chown -RL mysql:mysql /usr/local/mysql/datasudo /usr/local/mysql/support-files/mysql.server start PS：如果你忘了MySQL的密码，这个文章有修改密码的步骤，比其他罗里吧嗦的好很多。地址在这里—&gt;http://www.cnblogs.com/lihuanqing/p/5623872.html 1222333 MAMP中的mysql密码（默认root - root）和自行安装的mysql密码不同。ceshi]]></content>
+    <content type="text"><![CDATA[mac MySQL Server 启动无效从系统偏好设置启动MySQL时，多次点击start无效，发现下面显示了一行警告“Warning the user/local/mysql/data directory is not owned by the mysql user”百度没找到能用的解决方案，后来在stackoverflow上找到了能用的，原文链接如下：http://stackoverflow.com/questions/5527676/warning-the-user-local-mysql-data-directory-is-not-owned-by-the-mysql-user/27517150#27517150 在终端输入以下命令（需密码），再点击start即可 12345678sudo chown -RL root:mysql /usr/local/mysqlsudo chown -RL mysql:mysql /usr/local/mysql/datasudo /usr/local/mysql/support-files/mysql.server start PS：如果你忘了MySQL的密码，这个文章有修改密码的步骤，比其他罗里吧嗦的好很多。地址在这里—&gt; http://www.cnblogs.com/lihuanqing/p/5623872.html MAMP中的mysql密码（默认root - root）和自行安装的mysql密码不同。ceshi]]></content>
       <tags>
         <tag>mysql</tag>
       </tags>
