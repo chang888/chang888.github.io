@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="July wind, August rain">
 <meta property="og:description" content="数据类型要讲浅拷贝和深拷贝之前得先回顾一下JS中的数据类型，主要分为：  基本数据类型 Number,String,Boolean,Undefined,Null,Symbol（ECMAScript6 新定义）  引用数据类型 Object     js中每个数据都需要内存空间，内存空间又分为两种，栈内存（stack）和堆内存（heap）  栈内存一般储存基础数据类型  堆内存一般存储引用数据">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-18T05:40:57.945Z">
+<meta property="og:updated_time" content="2019-09-11T09:48:25.930Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="浅拷贝和深拷贝">
 <meta name="twitter:description" content="数据类型要讲浅拷贝和深拷贝之前得先回顾一下JS中的数据类型，主要分为：  基本数据类型 Number,String,Boolean,Undefined,Null,Symbol（ECMAScript6 新定义）  引用数据类型 Object     js中每个数据都需要内存空间，内存空间又分为两种，栈内存（stack）和堆内存（heap）  栈内存一般储存基础数据类型  堆内存一般存储引用数据">
@@ -394,9 +394,9 @@
 <h2 id="浅拷贝和深拷贝的实现"><a href="#浅拷贝和深拷贝的实现" class="headerlink" title="浅拷贝和深拷贝的实现"></a>浅拷贝和深拷贝的实现</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 先有一个对象 例如 </span></span><br><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">    name : <span class="string">'zs'</span>,</span><br><span class="line">    age: <span class="number">18</span>,</span><br><span class="line">    car : &#123;</span><br><span class="line">      brand: <span class="string">'牧马人'</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="深拷贝的实现"><a href="#深拷贝的实现" class="headerlink" title="深拷贝的实现"></a>深拷贝的实现</h3><ol>
-<li>JSON序列化 </li>
+<li>JSON序列化</li>
 </ol>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 实现浅拷贝 </span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> obj2 = <span class="built_in">JSON</span>.parse(<span class="built_in">JSON</span>.stringify(obj))</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 实现浅拷贝</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> obj2 = <span class="built_in">JSON</span>.parse(<span class="built_in">JSON</span>.stringify(obj))</span><br></pre></td></tr></table></figure>
 
 <ol start="2">
 <li>遍历对象 递归</li>
@@ -418,42 +418,6 @@
 
 </li>
 </ol>
-<!-- 
-
-> * 发布日记，杂文，所见所想
-> * 撰写发布技术文稿（代码支持）
-> * 撰写发布学术论文（LaTeX 公式支持）
-
-> 请保留此份 Cmd Markdown 的欢迎稿兼使用说明，如需撰写新稿件，点击顶部工具栏右侧的 <i class="icon-file"></i> **新文稿** 或者使用快捷键 `Ctrl+Alt+N`。
-
-------
-
-+ [ ] 支持以 PDF 格式导出文稿
-+ [ ] 改进 Cmd 渲染算法，使用局部渲染技术提高渲染效率
-+ [x] 新增 Todo 列表功能
-+ [x] 修复 LaTex 公式渲染问题
-+ [x] 新增 LaTex 公式编号功能
-
-
-### 2. 书写一个质能守恒公式[^LaTeX]
-$$E=mc^2$$
-
-### 3. 高亮一段代码[^code]
-
-| 项目        | 价格   |  数量  |
-| -------+   | -----:  | :----:  |
-| 计算机     | \$1600 |   5     |
-| 手机        |   \$12   |   12   |
-| 管线        |    \$1    |  234  |
---------------------+ 
-
-* [写在前面](#1)
-* [常用高阶语法](#2)
-    * [表格的使用](#3)
-    * [页内链接跳转](#4)
-    * [本地文件链接](#5)
-* [高效率软件推荐](#6)
-* [参考资料](#7) -->
 
       
     </div>
