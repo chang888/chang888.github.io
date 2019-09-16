@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="July wind, August rain">
 <meta property="og:description" content="数据类型要讲浅拷贝和深拷贝之前得先回顾一下JS中的数据类型，主要分为：  基本数据类型 Number,String,Boolean,Undefined,Null,Symbol（ECMAScript6 新定义）  引用数据类型 Object      js中每个数据都需要内存空间，内存空间又分为两种，栈内存（stack）和堆内存（heap）   栈内存一般储存基础数据类型  堆内存一般存储引用数">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-09-16T05:44:37.663Z">
+<meta property="og:updated_time" content="2019-09-16T08:27:12.193Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="浅拷贝和深拷贝">
 <meta name="twitter:description" content="数据类型要讲浅拷贝和深拷贝之前得先回顾一下JS中的数据类型，主要分为：  基本数据类型 Number,String,Boolean,Undefined,Null,Symbol（ECMAScript6 新定义）  引用数据类型 Object      js中每个数据都需要内存空间，内存空间又分为两种，栈内存（stack）和堆内存（heap）   栈内存一般储存基础数据类型  堆内存一般存储引用数">
@@ -392,7 +392,7 @@
 </li>
 </ul>
 <p>因此，我们要访问堆内存中的引用数据类型时，实际上是先从栈中获取到该对象的引用地址，然后再从堆内存中读取到需要的数据</p>
-<h2 id="浅拷贝和深拷贝的实现"><a href="#浅拷贝和深拷贝的实现" class="headerlink" title="浅拷贝和深拷贝的实现"></a>浅拷贝和深拷贝的实现</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 先有一个对象 例如</span></span><br><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">    name : <span class="string">'zs'</span>,</span><br><span class="line">    age: <span class="number">18</span>,</span><br><span class="line">    car : &#123;</span><br><span class="line">      brand: <span class="string">'牧马人'</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="浅拷贝和深拷贝的实现"><a href="#浅拷贝和深拷贝的实现" class="headerlink" title="浅拷贝和深拷贝的实现"></a>浅拷贝和深拷贝的实现</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 先有一个对象 例如</span></span><br><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">    name : <span class="string">'zs'</span>,</span><br><span class="line">    age: <span class="number">18</span>,</span><br><span class="line">    car : &#123;</span><br><span class="line">      brand: <span class="string">'牧马人'</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="深拷贝的实现"><a href="#深拷贝的实现" class="headerlink" title="深拷贝的实现"></a>深拷贝的实现</h3><ol>
 <li>JSON序列化</li>
