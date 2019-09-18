@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/express%E5%92%8Ckoa.html</loc>
+    
+    <lastmod>2019-09-18T15:32:25.932Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/%E6%B5%85%E6%8B%B7%E8%B4%9D%E5%92%8C%E6%B7%B1%E6%8B%B7%E8%B4%9D.html</loc>
     
     <lastmod>2019-09-17T01:17:29.815Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>http://yoursite.com/%E5%90%AF%E5%8A%A8%E6%97%A0%E6%95%88.html</loc>
     
     <lastmod>2019-09-10T01:18:49.324Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/express%E5%92%8Ckoa.html</loc>
-    
-    <lastmod>2019-09-07T16:02:39.360Z</lastmod>
     
   </url>
   
