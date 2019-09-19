@@ -101,7 +101,7 @@
   <entry>
     <title><![CDATA[webpack性能优化]]></title>
     <url>%2Fwebpack%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96.html</url>
-    <content type="text"><![CDATA[webpack 介绍 webpack是当前最流行的打包构建工具之一 深度利用他的优点去优化代码，将脚本拆分成不同的部分，同时剔除用代码能够保证你的应用维持最小的宽带和进程消耗 webpack 懒加载Lazy-load code that you don’t need right now 懒加载 图片懒加载 测试 测试2 测试3 增加slide balbel]]></content>
+    <content type="text"><![CDATA[webpack 介绍 webpack是当前最流行的打包构建工具之一 深度利用他的优点去优化代码，将脚本拆分成不同的部分，同时剔除用代码能够保证你的应用维持最小的宽带和进程消耗 webpack 懒加载Lazy-load code that you don’t need right now 懒加载 图片懒加载 测试 测试3 增加slide balbel]]></content>
       <categories>
         <category>webpack</category>
       </categories>
