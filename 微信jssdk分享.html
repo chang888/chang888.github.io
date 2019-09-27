@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="July wind, August rain">
 <meta property="og:description" content="最近公司要需要活动分享增加次数，特此记录一下引入 jssdk 进行微信分享 公众号配置 jssdk 域名 例如 test.qq.com 并把相关 txt 放到域名目录下项目引入 jssdk 文件  1npm i weixin-jssdk   从服务器获取 wx.config 配置 服务器的配置稍后说  12345678910111213Vue.prototype  .$get(&quot;/wx/jssdk">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-09-26T14:04:35.363Z">
+<meta property="og:updated_time" content="2019-09-27T06:48:42.808Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="微信jssdk分享">
 <meta name="twitter:description" content="最近公司要需要活动分享增加次数，特此记录一下引入 jssdk 进行微信分享 公众号配置 jssdk 域名 例如 test.qq.com 并把相关 txt 放到域名目录下项目引入 jssdk 文件  1npm i weixin-jssdk   从服务器获取 wx.config 配置 服务器的配置稍后说  12345678910111213Vue.prototype  .$get(&quot;/wx/jssdk">
@@ -367,6 +367,28 @@
 <blockquote>
 <p>微信添加开发者 在开发者工具中测试即可</p>
 </blockquote>
+<blockquote>
+<p>前端我们用的是vue hash路由，分享之后微信会在链接上加上?form= 的参数，从而导致项目直接进了首页，解决办法<br>解决方案：页面中转，url重定向。</p>
+</blockquote>
+<p>1，在static目录下新建一个名为html的文件夹，在html文件夹中再新建一个redirect.html</p>
+<p>html中写入以下内容</p>
+<script>
+    let url = location.href.split('?')
+    let pars = url[1].split('&')
+    let data = {}
+    pars.forEach((n, i) => {
+        let p = n.split('=')
+        data[p[0]] = p[1]
+    })
+    if (!!data.app3Redirect) {
+        self.location = decodeURIComponent(data.app3Redirect)
+    }
+
+</script>
+<p>只需要script标签就可以了，反正只是做重定向。</p>
+<p>2，在商品详情页的内容如下，注意：link: shareWxLink,</p>
+<p>shareconfig:function(){<br>    var _that = this;<br>    wx.ready(function () {<br>        var shareWxLink = window.location.href.split(‘#’)[0] + ‘static/html/redirect.html?app3Redirect=’ + encodeURIComponent(window.location.href);</p>
+<pre><code class="js"></code></pre>
 
       
     </div>
@@ -585,7 +607,7 @@
 </div>
 
 
-  <div class="powered-by"> <span class="post-count">博客全站共8.3k字</span>由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+  <div class="powered-by"> <span class="post-count">博客全站共8.4k字</span>由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
 
 
 
