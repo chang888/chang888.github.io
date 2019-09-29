@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="July wind, August rain">
 <meta property="og:description" content="最近公司要需要活动分享增加次数，特此记录一下引入 jssdk 进行微信分享 公众号配置 jssdk 域名 例如 test.qq.com 并把相关 txt 放到域名目录下项目引入 jssdk 文件  1npm i weixin-jssdk   从服务器获取 wx.config 配置 服务器的配置稍后说  12345678910111213Vue.prototype  .$get(&quot;/wx/jssdk">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-09-28T12:52:03.886Z">
+<meta property="og:updated_time" content="2019-09-29T01:05:44.326Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="微信jssdk分享">
 <meta name="twitter:description" content="最近公司要需要活动分享增加次数，特此记录一下引入 jssdk 进行微信分享 公众号配置 jssdk 域名 例如 test.qq.com 并把相关 txt 放到域名目录下项目引入 jssdk 文件  1npm i weixin-jssdk   从服务器获取 wx.config 配置 服务器的配置稍后说  12345678910111213Vue.prototype  .$get(&quot;/wx/jssdk">
@@ -372,23 +372,12 @@
 </blockquote>
 <p>1，在static目录下新建一个名为html的文件夹，在html文件夹中再新建一个redirect.html</p>
 <p>html中写入以下内容</p>
-<script>
-    let url = location.href.split('?')
-    let pars = url[1].split('&')
-    let data = {}
-    pars.forEach((n, i) => {
-        let p = n.split('=')
-        data[p[0]] = p[1]
-    })
-    if (!!data.app3Redirect) {
-        self.location = decodeURIComponent(data.app3Redirect)
-    }
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">let</span> url = location.href.split(<span class="string">'?'</span>)</span></span><br><span class="line"><span class="javascript">    <span class="keyword">let</span> pars = url[<span class="number">1</span>].split(<span class="string">'&amp;'</span>)</span></span><br><span class="line"><span class="javascript">    <span class="keyword">let</span> data = &#123;&#125;</span></span><br><span class="line"><span class="javascript">    pars.forEach(<span class="function">(<span class="params">n, i</span>) =&gt;</span> &#123;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">let</span> p = n.split(<span class="string">'='</span>)</span></span><br><span class="line">        data[p[0]] = p[1]</span><br><span class="line">    &#125;)</span><br><span class="line"><span class="javascript">    <span class="keyword">if</span> (!!data.app3Redirect) &#123;</span></span><br><span class="line"><span class="javascript">        self.location = <span class="built_in">decodeURIComponent</span>(data.app3Redirect)</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-</script>
 <p>只需要script标签就可以了，反正只是做重定向。</p>
 <p>2，在商品详情页的内容如下，注意：link: shareWxLink,</p>
-<p>shareconfig:function(){<br>    var _that = this;<br>    wx.ready(function () {<br>        var shareWxLink = window.location.href.split(‘#’)[0] + ‘static/html/redirect.html?app3Redirect=’ + encodeURIComponent(window.location.href);</p>
-<pre><code class="js"></code></pre>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">shareconfig:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> _that = <span class="keyword">this</span>;</span><br><span class="line">    wx.ready(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> shareWxLink = <span class="built_in">window</span>.location.href.split(<span class="string">'#'</span>)[<span class="number">0</span>] + <span class="string">'static/html/redirect.html?app3Redirect='</span> + <span class="built_in">encodeURIComponent</span>(<span class="built_in">window</span>.location.href);</span><br></pre></td></tr></table></figure>
+
 
       
     </div>
@@ -607,7 +596,7 @@
 </div>
 
 
-  <div class="powered-by"> <span class="post-count">博客全站共8.4k字</span>由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+  <div class="powered-by"> <span class="post-count">博客全站共8.5k字</span>由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
 
 
 
