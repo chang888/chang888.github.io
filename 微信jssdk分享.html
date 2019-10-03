@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="July wind, August rain">
 <meta property="og:description" content="最近公司要需要活动分享增加次数，特此记录一下引入 jssdk 进行微信分享 公众号配置 jssdk 域名 例如 test.qq.com 并把相关 txt 放到域名目录下项目引入 jssdk 文件  1npm i weixin-jssdk   从服务器获取 wx.config 配置 服务器的配置稍后说  12345678910111213Vue.prototype  .$get(&quot;/wx/jssdk">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-10-02T15:27:31.760Z">
+<meta property="og:updated_time" content="2019-10-03T09:25:23.550Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="微信jssdk分享">
 <meta name="twitter:description" content="最近公司要需要活动分享增加次数，特此记录一下引入 jssdk 进行微信分享 公众号配置 jssdk 域名 例如 test.qq.com 并把相关 txt 放到域名目录下项目引入 jssdk 文件  1npm i weixin-jssdk   从服务器获取 wx.config 配置 服务器的配置稍后说  12345678910111213Vue.prototype  .$get(&quot;/wx/jssdk">
@@ -370,7 +370,9 @@
 <blockquote>
 <p>前端我们用的是vue hash路由，分享之后微信会在链接上加上?form= 的参数，从而导致项目直接进了首页，解决办法<br>解决方案：页面中转，url重定向。</p>
 </blockquote>
+<blockquote>
 <p>1，在static目录下新建一个名为html的文件夹，在html文件夹中再新建一个redirect.html</p>
+</blockquote>
 <p>html中写入以下内容</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">let</span> url = location.href.split(<span class="string">'?'</span>)</span></span><br><span class="line"><span class="javascript">    <span class="keyword">let</span> pars = url[<span class="number">1</span>].split(<span class="string">'&amp;'</span>)</span></span><br><span class="line"><span class="javascript">    <span class="keyword">let</span> data = &#123;&#125;</span></span><br><span class="line"><span class="javascript">    pars.forEach(<span class="function">(<span class="params">n, i</span>) =&gt;</span> &#123;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">let</span> p = n.split(<span class="string">'='</span>)</span></span><br><span class="line">        data[p[0]] = p[1]</span><br><span class="line">    &#125;)</span><br><span class="line"><span class="javascript">    <span class="keyword">if</span> (!!data.app3Redirect) &#123;</span></span><br><span class="line"><span class="javascript">        self.location = <span class="built_in">decodeURIComponent</span>(data.app3Redirect)</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
