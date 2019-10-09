@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://yoursite.com/vue-router%E6%A8%A1%E5%BC%8F.html</loc>
+    <lastmod>2019-10-09</lastmod>
+  </url>  <url>
     <loc>http://yoursite.com/express%E5%92%8Ckoa.html</loc>
     <lastmod>2019-10-08</lastmod>
   </url>  <url>
@@ -27,9 +30,6 @@
   </url>  <url>
     <loc>http://yoursite.com/vue-cli3.html</loc>
     <lastmod>2019-08-04</lastmod>
-  </url>  <url>
-    <loc>http://yoursite.com/vue-router%E6%A8%A1%E5%BC%8F.html</loc>
-    <lastmod>2019-07-29</lastmod>
   </url>  <url>
     <loc>http://yoursite.com/MVVM%E5%92%8CMVC.html</loc>
     <lastmod>2019-07-26</lastmod>
