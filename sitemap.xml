@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/vue-router%E6%A8%A1%E5%BC%8F.html</loc>
+    
+    <lastmod>2019-10-30T09:26:19.288Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/vue%E7%9A%84%E4%B8%80%E4%BA%9B%E7%89%B9%E6%80%A7.html</loc>
     
-    <lastmod>2019-10-30T08:59:00.306Z</lastmod>
+    <lastmod>2019-10-30T09:17:12.296Z</lastmod>
     
   </url>
   
@@ -19,13 +26,6 @@
     <loc>http://yoursite.com/%E6%89%80%E8%A7%81%E5%8F%8A%E6%89%80%E5%BE%97.html</loc>
     
     <lastmod>2019-10-23T06:38:43.438Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/vue-router%E6%A8%A1%E5%BC%8F.html</loc>
-    
-    <lastmod>2019-10-16T01:12:10.547Z</lastmod>
     
   </url>
   

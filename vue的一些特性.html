@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="关于vue的一些特性组件通信 父 =&amp;gt; 子    属性props 特性attrs 引用refs 子元素 $childeren    子 =&amp;gt; 父   属性props 特性attrs 引用refs 子元素 $childeren    provide inject   推荐在组件库或者高阶组件中使用 不推荐直接用于应用程序代码中">
+<meta name="description" content="关于vue的一些特性组件通信 父 =&amp;gt; 子   属性props 特性attrs 引用refs 子元素 $childeren    子 =&amp;gt; 父   $emit    兄弟组件   通过共同的祖先 $parant或者$root    祖先和后代   provide inject 推荐在组件库或者高阶组件中使用 不推荐直接用于应用程序代码中    任意的两个组件   事件总线$bus 状态">
 <meta name="keywords" content="vue">
 <meta property="og:type" content="article">
 <meta property="og:title" content="vue的一些特性">
 <meta property="og:url" content="http://yoursite.com/vue的一些特性.html">
 <meta property="og:site_name" content="July wind, August rain">
-<meta property="og:description" content="关于vue的一些特性组件通信 父 =&amp;gt; 子    属性props 特性attrs 引用refs 子元素 $childeren    子 =&amp;gt; 父   属性props 特性attrs 引用refs 子元素 $childeren    provide inject   推荐在组件库或者高阶组件中使用 不推荐直接用于应用程序代码中">
+<meta property="og:description" content="关于vue的一些特性组件通信 父 =&amp;gt; 子   属性props 特性attrs 引用refs 子元素 $childeren    子 =&amp;gt; 父   $emit    兄弟组件   通过共同的祖先 $parant或者$root    祖先和后代   provide inject 推荐在组件库或者高阶组件中使用 不推荐直接用于应用程序代码中    任意的两个组件   事件总线$bus 状态">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-10-30T08:59:00.306Z">
+<meta property="og:updated_time" content="2019-10-30T09:17:12.296Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vue的一些特性">
-<meta name="twitter:description" content="关于vue的一些特性组件通信 父 =&amp;gt; 子    属性props 特性attrs 引用refs 子元素 $childeren    子 =&amp;gt; 父   属性props 特性attrs 引用refs 子元素 $childeren    provide inject   推荐在组件库或者高阶组件中使用 不推荐直接用于应用程序代码中">
+<meta name="twitter:description" content="关于vue的一些特性组件通信 父 =&amp;gt; 子   属性props 特性attrs 引用refs 子元素 $childeren    子 =&amp;gt; 父   $emit    兄弟组件   通过共同的祖先 $parant或者$root    祖先和后代   provide inject 推荐在组件库或者高阶组件中使用 不推荐直接用于应用程序代码中    任意的两个组件   事件总线$bus 状态">
 
 
 
@@ -349,8 +349,8 @@
       
 
       
-        <h2 id="关于vue的一些特性"><a href="#关于vue的一些特性" class="headerlink" title="关于vue的一些特性"></a>关于<strong>vue</strong>的一些特性</h2><h3 id="组件通信"><a href="#组件通信" class="headerlink" title="组件通信"></a>组件通信</h3><ol>
-<li><p>父 =&gt; 子 </p>
+        <h1 id="关于vue的一些特性"><a href="#关于vue的一些特性" class="headerlink" title="关于vue的一些特性"></a>关于<strong>vue</strong>的一些特性</h1><h2 id="组件通信"><a href="#组件通信" class="headerlink" title="组件通信"></a>组件通信</h2><ol>
+<li><p>父 =&gt; 子</p>
 <blockquote>
 <ul>
 <li>属性props</li>
@@ -363,21 +363,42 @@
 <li><p>子 =&gt; 父</p>
 <blockquote>
 <ul>
-<li>属性props</li>
-<li>特性attrs</li>
-<li>引用refs</li>
-<li>子元素 $childeren</li>
+<li>$emit</li>
 </ul>
 </blockquote>
 </li>
-<li><p>provide inject </p>
+<li><p>兄弟组件</p>
 <blockquote>
-<p>推荐在组件库或者高阶组件中使用 不推荐直接用于应用程序代码中</p>
+<ul>
+<li>通过共同的祖先 $parant或者$root</li>
+</ul>
 </blockquote>
 </li>
-<li></li>
+<li><p>祖先和后代</p>
+<blockquote>
+<ul>
+<li>provide inject 推荐在组件库或者高阶组件中使用 不推荐直接用于应用程序代码中</li>
+</ul>
+</blockquote>
+</li>
+<li><p>任意的两个组件</p>
+<blockquote>
+<ul>
+<li>事件总线$bus</li>
+<li>状态管理vuex</li>
+</ul>
+</blockquote>
+</li>
 </ol>
-
+<h2 id="slot插槽"><a href="#slot插槽" class="headerlink" title="slot插槽"></a>slot插槽</h2><blockquote>
+<p><strong>vue2.6</strong>有过更新 废弃了之前的slot</p>
+<ul>
+<li>匿名插槽</li>
+<li>具名插槽</li>
+<li>作用域插槽</li>
+</ul>
+</blockquote>
+<h2 id="说出-sync和v-model的异同"><a href="#说出-sync和v-model的异同" class="headerlink" title="说出.sync和v-model的异同"></a>说出.sync和v-model的异同</h2>
       
     </div>
     
@@ -565,7 +586,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#关于vue的一些特性"><span class="nav-number">1.</span> <span class="nav-text">关于vue的一些特性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#组件通信"><span class="nav-number">1.1.</span> <span class="nav-text">组件通信</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#关于vue的一些特性"><span class="nav-number">1.</span> <span class="nav-text">关于vue的一些特性</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#组件通信"><span class="nav-number">1.1.</span> <span class="nav-text">组件通信</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#slot插槽"><span class="nav-number">1.2.</span> <span class="nav-text">slot插槽</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#说出-sync和v-model的异同"><span class="nav-number">1.3.</span> <span class="nav-text">说出.sync和v-model的异同</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -595,7 +616,7 @@
 </div>
 
 
-  <div class="powered-by"> <span class="post-count">博客全站共8.6k字</span>由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+  <div class="powered-by"> <span class="post-count">博客全站共9k字</span>由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
 
 
 
