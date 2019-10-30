@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[vue的一些特性]]></title>
+    <url>%2Fvue%E7%9A%84%E4%B8%80%E4%BA%9B%E7%89%B9%E6%80%A7.html</url>
+    <content type="text"><![CDATA[关于vue的一些特性组件通信 父 =&gt; 子 属性props 特性attrs 引用refs 子元素 $childeren 子 =&gt; 父 属性props 特性attrs 引用refs 子元素 $childeren provide inject 推荐在组件库或者高阶组件中使用 不推荐直接用于应用程序代码中]]></content>
+      <categories>
+        <category>vue</category>
+      </categories>
+      <tags>
+        <tag>vue</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[微信jssdk分享]]></title>
     <url>%2F%E5%BE%AE%E4%BF%A1jssdk%E5%88%86%E4%BA%AB.html</url>
     <content type="text"><![CDATA[最近公司要需要活动分享增加次数，特此记录一下引入 jssdk 进行微信分享 公众号配置 jssdk 域名 例如 test.qq.com 并把相关 txt 放到域名目录下 项目引入 jssdk 文件 1npm i weixin-jssdk 从服务器获取 wx.config 配置 服务端的配置稍后说 12345678910111213141516Vue.prototype .$get("/wx/jssdkconfig?url=" + location.href.split("#")[0]) .then(data =&gt; &#123; wx.config(&#123; debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。 appId: data.appId, // 必填，公众号的唯一标识 timestamp: data.timestamp, // 必填，生成签名的时间戳 nonceStr: data.nonceStr, // 必填，生成签名的随机串 signature: data.signature, // 必填，签名 jsApiList: data.jsApiList // 必填，需要使用的JS接口列表 &#125;); // console.log("注入WXConfig成功", wx) &#125;); 注入成功之后执行 wx.ready 1234567891011121314151617181920212223wx.ready(() =&gt; &#123; initShareInfo(&#123;title: "测试分享的标题"&#125;)&#125;)initShareInfo(&#123;title, desc, link, imgUrl&#125;, cb) &#123; let shareInfo = &#123; title: title || "默认标题", // 分享标题 desc: desc || "默认分享描述", // 分享描述 link: link || "http://aaa.com", // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致 imgUrl, // 分享图标, // 18年8月之后 分享接口调用后，不再返回用户是否完成分享事件，见微信官方 success: (rs) =&gt; &#123; Toast("分享成功") // 分享的回调 cb &amp;&amp; cb() &#125; &#125; wx.onMenuShareAppMessage(shareInfo) wx.onMenuShareTimeline(shareInfo) wx.onMenuShareQQ(shareInfo) wx.onMenuShareQZone(shareInfo) &#125; 微信添加开发者 在开发者工具中测试即可 前端我们用的是vue hash路由，分享之后微信会在链接上加上?form= 的参数，从而导致项目直接进了首页，解决办法解决方案：页面中转，url重定向。 1，在static目录下新建一个名为html的文件夹，在html文件夹中再新建一个redirect.html html中写入以下内容 12345678910111213&lt;script&gt; let url = location.href.split('?') let pars = url[1].split('&amp;') let data = &#123;&#125; pars.forEach((n, i) =&gt; &#123; let p = n.split('=') data[p[0]] = p[1] &#125;) if (!!data.app3Redirect) &#123; self.location = decodeURIComponent(data.app3Redirect) &#125;&lt;/script&gt; 只需要script标签就可以了，反正只是做重定向。 2，在商品详情页的内容如下，注意：link: shareWxLink, 1234shareconfig:function()&#123; var _that = this; wx.ready(function () &#123; var shareWxLink = window.location.href.split('#')[0] + 'static/html/redirect.html?app3Redirect=' + encodeURIComponent(window.location.href);]]></content>
