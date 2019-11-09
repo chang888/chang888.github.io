@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[vue的一些特性]]></title>
     <url>%2Fvue%E7%9A%84%E4%B8%80%E4%BA%9B%E7%89%B9%E6%80%A7.html</url>
-    <content type="text"><![CDATA[关于vue的一些特性组件通信 父 =&gt; 子 属性props 特性attrs 引用refs 子元素 $childeren 子 =&gt; 父 $emit 兄弟组件 通过共同的祖先 $parant或者$root 祖先和后代 provide inject 推荐在组件库或者高阶组件中使用 不推荐直接用于应用程序代码中 任意的两个组件 事件总线$bus 状态管理vuex slot插槽 vue2.6有过更新 废弃了之前的slot 匿名插槽 具名插槽 作用域插槽 说出.sync和v-model的异同 2333 3334 00999 99990 黑与白 说对吧 adfnonj]]></content>
+    <content type="text"><![CDATA[关于vue的一些特性组件通信 父 =&gt; 子 属性props 特性attrs 引用refs 子元素 $childeren 子 =&gt; 父 $emit 兄弟组件 通过共同的祖先 $parant或者$root 祖先和后代 provide inject 推荐在组件库或者高阶组件中使用 不推荐直接用于应用程序代码中 任意的两个组件 事件总线$bus 状态管理vuex slot插槽 vue2.6有过更新 废弃了之前的slot 匿名插槽 具名插槽 作用域插槽 说出.sync和v-model的异同 2333 3334 00999 99990 黑与白 说对吧 adfnonj 我是]]></content>
       <categories>
         <category>vue</category>
       </categories>
